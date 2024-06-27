@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "804783619713",
+    "project_id": "music-e39a7",
+    "storage_bucket": "music-e39a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804783619713:android:56c9bca7d8c284d1bfd780",
+        "android_client_info": {
+          "package_name": "com.example.music"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC95hxjHAvaFbUzKYmTGWtvw_rUlu3sIes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804783619713:android:c45ece45f1ad683abfd780",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC95hxjHAvaFbUzKYmTGWtvw_rUlu3sIes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804783619713:android:263437fbd8a47f28bfd780",
+        "android_client_info": {
+          "package_name": "com.example.yearchange"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC95hxjHAvaFbUzKYmTGWtvw_rUlu3sIes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
