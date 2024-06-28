@@ -42,7 +42,6 @@ public class ListMusicActivity extends AppCompatActivity {
 
         lvSongs = findViewById(R.id.lvSongs);
         dbHelper = new MusicDatabaseHelper(this);
-//        dbHelper.deleteAllData();
         songList = dbHelper.getAllSongs();
 
 
