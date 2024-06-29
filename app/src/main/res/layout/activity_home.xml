@@ -36,8 +36,155 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="vertical" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/chu_de_the_loai_bg">
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#6750a4">
+
+        <TextView
+            android:id="@+id/txtChuDeTheLoai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Chủ Đề Và Thể Loại"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnXemThem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xem thêm"
+            android:textSize="12sp"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:padding="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+
+            />
+    </LinearLayout>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:padding="8dp"
+        >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- Add your items here -->
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="7dp"
+
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/imgTopic1"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+
+
+                        /> <!-- Đặt tên hình ảnh tại đây -->
+
+                    <TextView
+                        android:id="@+id/item1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:textSize="25dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="7dp"
+
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/imgTopic2"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+
+
+                        /> <!-- Đặt tên hình ảnh tại đây -->
+
+                    <TextView
+                        android:id="@+id/item2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:textSize="25dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="7dp"
+
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/imgTopic3"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+
+
+                        /> <!-- Đặt tên hình ảnh tại đây -->
+
+                    <TextView
+                        android:id="@+id/item3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:textSize="25dp"/>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+    </HorizontalScrollView>
+    </LinearLayout>
+
+
+
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"

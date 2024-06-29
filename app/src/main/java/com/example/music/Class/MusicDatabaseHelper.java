@@ -229,6 +229,48 @@ public class MusicDatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return song;
     }
+    public List<Topic> getAllChuDe(){
+        List<Topic> topList = new ArrayList<>();
+        String selectQuery = "SELECT * FROM chude";
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                Topic topic = new Topic(0,  null, null);
+                topic.setIdChuDe(cursor.getInt(0));
+                topic.setTenChuDe(cursor.getString(1));
+                topic.setHinhChuDe(cursor.getString(2));
 
+
+                topList.add(topic);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return topList;
+    }
+    public List<Category> getAllTheLoai(){
+        List<Category> cateList = new ArrayList<>();
+        String selectQuery = "SELECT * FROM theloai";
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                Category category = new Category(0,  0, null,null);
+                category.setIdTheLoai(cursor.getInt(0));
+                category.setIdChuDe(cursor.getInt(1));;
+                category.setTenTheLoai(cursor.getString(2));
+                category.setHinhTheLoai(cursor.getString(3));
+
+
+                cateList.add(category);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return cateList;
+    }
 
 }
