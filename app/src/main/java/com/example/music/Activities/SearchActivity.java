@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -34,8 +35,9 @@ public class SearchActivity extends AppCompatActivity {
     private ListView lvSearchSong;
     private List<Song> songSearchList;
     private EditText textSearch;
+    private ImageView backButtonHome;
 
-    @SuppressLint("WrongViewCast")
+    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,7 @@ public class SearchActivity extends AppCompatActivity {
         lvSearchSong = findViewById(R.id.lvSearchSong);
         textSearch = findViewById(R.id.textSearch);
         textSearch = findViewById(R.id.textSearch);
+        backButtonHome = findViewById(R.id.backButtonHome);
         dbHelper = new MusicDatabaseHelper(this);
         songSearchList = dbHelper.getAllSongs();
         searchSongsAdapter = new SearchSongsAdapter(this, new ArrayList<>());
@@ -80,6 +83,13 @@ public class SearchActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
             }
         });
+        backButtonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 
     private void performSearch(String query) {

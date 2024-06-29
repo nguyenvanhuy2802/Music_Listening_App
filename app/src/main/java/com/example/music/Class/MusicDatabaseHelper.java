@@ -121,34 +121,34 @@ public class MusicDatabaseHelper extends SQLiteOpenHelper {
 
     private void insertCategory() {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("INSERT INTO theloai (idChuDe, tenTheLoai, hinhTheLoai) VALUES (1,'EDM', 'image_theloai_a.png')");
-        db.execSQL("INSERT INTO theloai (idChuDe , tenTheLoai, hinhTheLoai) VALUES (3,'Pop', 'image_theloai_b.png')");
-        db.execSQL("INSERT INTO theloai (idChuDe , tenTheLoai, hinhTheLoai) VALUES (1,'KPop', 'image_theloai_b.png')");
-        db.execSQL("INSERT INTO theloai (idChuDe , tenTheLoai, hinhTheLoai) VALUES (1,'Acoustic', 'image_theloai_b.png')");
-        db.execSQL("INSERT INTO theloai (idChuDe , tenTheLoai, hinhTheLoai) VALUES (2,'Ballad', 'image_theloai_b.png')");
+        db.execSQL("INSERT INTO theloai (idChuDe, tenTheLoai, hinhTheLoai) VALUES (1,'EDM', 'img/theloai/edm.jpg')");
+        db.execSQL("INSERT INTO theloai (idChuDe , tenTheLoai, hinhTheLoai) VALUES (3,'Pop', 'img/theloai/pop.jpg')");
+        db.execSQL("INSERT INTO theloai (idChuDe , tenTheLoai, hinhTheLoai) VALUES (1,'KPop', 'img/theloai/kpop.jpg')");
+        db.execSQL("INSERT INTO theloai (idChuDe , tenTheLoai, hinhTheLoai) VALUES (1,'Acoustic', 'img/theloai/acoustic.jpg')");
+        db.execSQL("INSERT INTO theloai (idChuDe , tenTheLoai, hinhTheLoai) VALUES (2,'Ballad', 'img/theloai/ballad.jpg')");
         db.close();
     }
 
     private void insertTopic() {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("INSERT INTO chude (tenChuDe, hinhChuDe) VALUES ('Nhạc chill', 'image_chude_a.png')");
-        db.execSQL("INSERT INTO chude (tenChuDe, hinhChuDe) VALUES ('Nhạc tâm trạng', 'image_chude_b.png')");
-        db.execSQL("INSERT INTO chude (tenChuDe, hinhChuDe) VALUES ('Nhạc ÂU Mỹ', 'image_chude_a.png')");
+        db.execSQL("INSERT INTO chude (tenChuDe, hinhChuDe) VALUES ('Nhạc chill', 'img/chude/nhacchill.jpg')");
+        db.execSQL("INSERT INTO chude (tenChuDe, hinhChuDe) VALUES ('Nhạc tâm trạng', 'img/chude/nhactamtrang.jpg')");
+        db.execSQL("INSERT INTO chude (tenChuDe, hinhChuDe) VALUES ('Nhạc ÂU Mỹ', 'img/chude/nhacaumy.jpg')");
         db.close();
     }
 
     private void insertAlbum() {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Sky Tour', 'Sơn Tùng MTP', 'image_a.png')");
-        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Cẩm tú cầu (lofi)', 'Rayo, Huỳnh Văn', 'image_b.png')");
-        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Anh thôi nhân nhường (Cover)', 'Kiều Chi', 'image_a.png')");
-        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Ngày em đẹp nhất (Single)', 'Tama', 'image_b.png')");
-        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Thủy Triều', 'Q.Hung MasterD', 'image_a.png')");
-        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Lệ lưu ly', 'Vũ Phụng Tiên, DT Tập Rap', 'image_b.png')");
-        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Từng quen', 'Wren Evans, ltsnk', 'image_a.png')");
-        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Lưu luyến sau chia tay', 'Try92, Kai06', 'image_b.png')");
-        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Gói gọn hồi ức trao anh', 'DJ AM, SS Remix', 'image_a.png')");
-        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Dadys Home', 'Usher', 'image_b.png')");
+        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Sky Tour', 'Sơn Tùng MTP', 'img/album/skytour.jpg')");
+        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Cẩm tú cầu (lofi)', 'Rayo, Huỳnh Văn', 'img/album/camtucau.jpg')");
+        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Anh thôi nhân nhường (Cover)', 'Kiều Chi', 'img/album/anhthoinhannhuong.jpg')");
+        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Ngày em đẹp nhất (Single)', 'Tama', 'img/album/ngayemdepnhat.jpg')");
+        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Thủy Triều', 'Q.Hung MasterD', 'img/album/thuytrieu.jpg')");
+        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Lệ lưu ly', 'Vũ Phụng Tiên, DT Tập Rap', 'img/album/leluuly.jpg')");
+        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Từng quen', 'Wren Evans, ltsnk', 'img/album/tungquen.jpg')");
+        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Lưu luyến sau chia tay', 'Try92, Kai06', 'img/album/luuluyensauchiatay.jpg')");
+        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Gói gọn hồi ức trao anh', 'DJ AM, SS Remix', 'img/album/goigonhoiuctraoanh.jpg')");
+        db.execSQL("INSERT INTO album (tenAlbum, tenCaSiAlbum, hinhAlbum) VALUES ('Daddys Home', 'Usher', 'img/album/daddyshome.jpg')");
         db.close();
 
     }

@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         beforeButton.setOnClickListener(this);
         loopButton.setOnClickListener(this);
         randomButton.setOnClickListener(this);
+        backButton.setOnClickListener(this);
     }
 
     private void setupInsets() {
@@ -399,6 +400,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             feature = false;
             randomButton.setImageResource(R.drawable.random_button_turn);
             loopButton.setImageResource(R.drawable.loop_button);
+        }
+        if(v.getId() == R.id.backButton){
+            finish();
+            musicPlayer.stop();
         }
     }
 }
