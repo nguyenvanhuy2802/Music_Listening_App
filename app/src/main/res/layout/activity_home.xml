@@ -83,6 +83,7 @@
 
                 <!-- Add your items here -->
                 <RelativeLayout
+
                     android:layout_width="130dp"
                     android:layout_height="match_parent"
                     android:layout_margin="7dp"

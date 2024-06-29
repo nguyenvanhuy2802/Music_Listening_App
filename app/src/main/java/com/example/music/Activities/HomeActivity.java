@@ -33,6 +33,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseStorage storage;
     private Button btnXemThem;
 
+    private List<Topic> topList;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -62,18 +63,22 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         storage = FirebaseStorage.getInstance();
         dbHelper = new MusicDatabaseHelper(this);
-        List<Topic> topList = dbHelper.getAllChuDe();
+        topList = dbHelper.getAllChuDe();
 
         item1.setText(String.valueOf(topList.get(0).getTenChuDe()));
         item2.setText(String.valueOf(topList.get(1).getTenChuDe()));
         item3.setText(String.valueOf(topList.get(2).getTenChuDe()));
         ImageView imgViews[] = {imgTopic1, imgTopic2, imgTopic3};
-        List<Topic> topics = dbHelper.getAllChuDe();
+
         for (int i = 0; i < 3; i++) {
-        Topic topic = topics.get(i);
+        Topic topic = topList.get(i);
         ImageView imageView = imgViews[i];
         loadImage(imageView, topic);
         }
+        btnXemThem.setOnClickListener(this);
+        imgTopic1.setOnClickListener(this);
+        imgTopic2.setOnClickListener(this);
+        imgTopic3.setOnClickListener(this);
     }
 
         private void loadImage(ImageView imageView, Topic topic) {
@@ -100,6 +105,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+
     @Override
     public void onClick (View v){
         if(v.getId() == R.id.searchButtonHome){
@@ -107,11 +113,36 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
         if(v.getId() == R.id.btnXemThem){
-            Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
+            Intent intent = new Intent(HomeActivity.this, TopicActivity.class);
             startActivity(intent);
         }
+        if(v.getId() == R.id.imgTopic1 ){
+            Intent intent = new Intent(HomeActivity.this, CategoryActivity.class);
+            int idTopic1 = topList.get(0).getIdChuDe();
+            Bundle bundle = new Bundle();
+            bundle.putInt("idTopic1", idTopic1);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+        if(v.getId() == R.id.imgTopic2 ){
+            Intent intent = new Intent(HomeActivity.this, CategoryActivity.class);
+            int idTopic2 = topList.get(1).getIdChuDe();
+            Bundle bundle = new Bundle();
+            bundle.putInt("idTopic2", idTopic2);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+        if(v.getId() == R.id.imgTopic3 ){
+            Intent intent = new Intent(HomeActivity.this, CategoryActivity.class);
+            int idTopic3 = topList.get(2).getIdChuDe();
+            Bundle bundle = new Bundle();
+            bundle.putInt("idTopic3", idTopic3);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+
     }
 
-    //của khang
+
 
 }

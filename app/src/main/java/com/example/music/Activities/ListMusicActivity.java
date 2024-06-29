@@ -13,6 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.music.Class.Category;
 import com.example.music.Class.MusicDatabaseHelper;
 import com.example.music.Class.Song;
 import com.example.music.Class.SongsAdapter;
@@ -44,9 +45,12 @@ public class ListMusicActivity extends AppCompatActivity {
         dbHelper = new MusicDatabaseHelper(this);
         songList = dbHelper.getAllSongs();
 
+        Bundle bundle = getIntent().getExtras();
+        int idCategory = bundle.getInt("idCategory");
 
+        List<Song> songByIdList=getSongById(idCategory);
         // Bỏ danh sách bài bát vào adapter
-        songsAdapter = new SongsAdapter(this, songList);
+        songsAdapter = new SongsAdapter(this, songByIdList);
         // Găn adapter vào listview
         lvSongs.setAdapter(songsAdapter);
         // Xử lí sự kiện khi chọn 1 bai hát từ danh sách
@@ -62,6 +66,16 @@ public class ListMusicActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+    public List<Song> getSongById(int idCategory){
+        List<Song> songByIdList = new ArrayList<>();
+        for (Song song: songList){
+            if(song.getIdTheLoai()==idCategory){
+                songByIdList.add(song);
+            }
+        }
+        return songByIdList;
     }
 
 }
