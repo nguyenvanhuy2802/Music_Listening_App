@@ -48,12 +48,17 @@ public class CategoryActivity extends AppCompatActivity {
             int idTopic1 = bundle.getInt("idTopic1",-1);
             int idTopic2 = bundle.getInt("idTopic2",-1);
             int idTopic3 = bundle.getInt("idTopic3",-1);
+            int idTopic = bundle.getInt("idTopic",-1);
+
             if (idTopic1 != -1){
                 idSelect=idTopic1;
             }else if(idTopic2 != -1){
                 idSelect=idTopic2;
-            } else {
+            }
+            else if(idTopic3 != -1){
                 idSelect = idTopic3;
+            }else if(idTopic != -1){
+                idSelect = idTopic;
             }
 
         }
