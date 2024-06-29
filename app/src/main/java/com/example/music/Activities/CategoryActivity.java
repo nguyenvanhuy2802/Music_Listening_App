@@ -93,6 +93,7 @@ public class CategoryActivity extends AppCompatActivity {
         for (Category category: categoryList){
             if(category.getIdChuDe()==idTopic){
                 categoryByIdList.add(category);
+
             }
         }
         return categoryByIdList;
