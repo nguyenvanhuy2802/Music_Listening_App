@@ -44,23 +44,24 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
 
         txtTitle.setText(currentCategory.getTenTheLoai());
         FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference storageRefPathImage = storage.getReference().child(currentCategory.getHinhTheLoai());
-        try {
-            File localFileImage = File.createTempFile("image", "jpg");
-            storageRefPathImage.getFile(localFileImage)
-                    .addOnSuccessListener(taskSnapshot -> {
-                        // Load ảnh từ local file vào ImageView
-                        Bitmap bitmap = BitmapFactory.decodeFile(localFileImage.getAbsolutePath());
-                        txtImage.setImageBitmap(bitmap);
-                    })
-                    .addOnFailureListener(e -> {
-                        e.printStackTrace();
-                        // Xử lý lỗi khi tải ảnh không thành công
-                    });
-        } catch (IOException e) {
-            e.printStackTrace();
+        if(currentCategory.getHinhTheLoai() != null) {
+            StorageReference storageRefPathImage = storage.getReference().child(currentCategory.getHinhTheLoai());
+            try {
+                File localFileImage = File.createTempFile("image", "jpg");
+                storageRefPathImage.getFile(localFileImage)
+                        .addOnSuccessListener(taskSnapshot -> {
+                            // Load ảnh từ local file vào ImageView
+                            Bitmap bitmap = BitmapFactory.decodeFile(localFileImage.getAbsolutePath());
+                            txtImage.setImageBitmap(bitmap);
+                        })
+                        .addOnFailureListener(e -> {
+                            e.printStackTrace();
+                            // Xử lý lỗi khi tải ảnh không thành công
+                        });
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-
         return listItemView;
     }
 }

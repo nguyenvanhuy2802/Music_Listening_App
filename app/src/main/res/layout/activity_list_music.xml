@@ -6,8 +6,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:orientation="vertical"
     android:padding="15dp"
     tools:context=".Activities.ListMusicActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <TextView
+            android:id="@+id/toolbarSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Danh sách bài hát "
+            android:textColor="@android:color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnBackSong"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/back_button_home" />
+
+    </androidx.appcompat.widget.Toolbar>
 
     <ListView
         android:id="@+id/lvSongs"

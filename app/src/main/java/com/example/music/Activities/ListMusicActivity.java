@@ -57,12 +57,12 @@ public class ListMusicActivity extends AppCompatActivity {
         lvSongs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Song selectedSong = songList.get(position);
+                Song selectedSong = songByIdList.get(position);
                 Intent intent = new Intent(ListMusicActivity.this, MainActivity.class);
                 // Đưa bài hát được chọn vào intent
                 intent.putExtra("selectedSong", selectedSong);
                 // Đưa danh sách bài hát được chọn vào intent
-                intent.putExtra("songList", (ArrayList<Song>) songList);
+                intent.putExtra("songList", (ArrayList<Song>) songByIdList);
                 startActivity(intent);
             }
         });
